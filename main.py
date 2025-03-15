@@ -17,3 +17,8 @@ app = FastAPI()
 @app.get('/')
 async def home():
     return {'message': 'Hello World'}
+
+@app.get('/items')
+async def items():
+    items = ['bags','shoes','shirts']
+    return {'items': items}
